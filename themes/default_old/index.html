@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row">
+        <div role="main" class="col-md-8">
+              <iframe id="videoInfo" src="https://www.youtube.com/embed/Lt1R_cp5Zhs?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> 
+        </div>
+	
+        <aside role="complementary" class="col-md-4">
+
+            <div class="row"><!--Mensagem-->
+              <div id="mensagem" class="col-md-12">
+                <span STYLE="font-size: 40pt">{{ ultima.mensagem }} - {{ultima.texto}}</span>
+              </div>
+            </div>
+
+            <div class="row"><!--Senha-->
+			  <div id="senha" class="blink">
+				<span STYLE="font-size: 90pt">{{ ultima.nomeCliente }}</span>
+			  </div>
+            </div>
+			
+            <div class="row"><!--Guichê-->
+              <div class="col-md-12">
+                <div id="local" class="local">
+                    <span>{{ ultima.local }}</span>
+                </div>
+                <div id="local-numero" class="numero-local">
+                    <span>{{ ultima.numeroLocal|pad:2 }}</span>
+                </div>
+              </div>
+            </div>
+
+        </aside>
+    </div>
+    <footer class="row historicoStyle">
+      <div id="historico">
+          <div class="senhas">
+              <div class="col-sm-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+                  <div class="senha">
+					  <span STYLE="font-size: 40pt"> {{senha.texto}} - {{ senha.nomeCliente }}</span>
+                  </div>
+                  <div class="local">
+                      <span>{{ senha.local }}: {{ senha.numeroLocal| pad:2 }}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+</div>
+<script type="text/javascript" src="script.js"></script>
+
+
+
+
+
+
+
+
+	
+
+
+
+
+

@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <header class="row">
+        <!--Cabeçalho-->
+    </header>
+    <div class="row">
+        <div role="main" class="col-md-8">
+          <!-- O tamanho do vídeo deverá ser width="909" height="900" -->
+            <!-- <iframe id="playList" width="909" height="511" src="https://www.youtube.com/embed/rXJ64eMR1L0?list=PLflbtPAWh7iptxlIaJHkfjJ58rVJj6W4y&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
+            <!-- <iframe id="videoInfo" src="https://www.youtube.com/embed/Lt1R_cp5Zhs?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
+			
+			<iframe id="videoInfo" src="https://www.youtube.com/embed/gxGbYrn68Ko" frameborder="0" allowfullscreen></iframe>
+			
+        </div>
+        <aside role="complementary" class="col-md-4">
+
+            <div class="row"><!--Mensagem-->
+              <div id="mensagem" class="col-md-12">
+                <span>{{ ultima.mensagem }}</span>
+              </div>
+            </div>
+
+            <div class="row"><!--Senha-->
+              <div id="senha" class="col-md-12">
+                <span>{{ ultima.texto }}</span>
+              </div>
+            </div>
+
+            <div class="row"><!--Guichê-->
+              <div class="col-md-12">
+                <div id="local" class="local">
+                    <span>{{ ultima.local }}</span>
+                </div>
+                <div id="local-numero" class="numero-local">
+                    <span>{{ ultima.numeroLocal|pad:2 }}</span>
+                </div>
+              </div>
+            </div>
+
+        </aside>
+    </div>
+    <footer class="row historicoStyle">
+      <div id="historico">
+          <div class="senhas">
+              <div class="col-sm-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+                  <div class="senha">
+                      <span>{{ senha.texto }}</span>
+                  </div>
+                  <div class="local">
+                      <span>{{ senha.local }}: {{ senha.numeroLocal| pad:2 }}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+</div>
+<script type="text/javascript" src="script.js"></script>

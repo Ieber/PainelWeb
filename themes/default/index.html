@@ -1,0 +1,75 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div role="main" class="col-md-8">
+              <!-- <iframe id="playList" width="909" height="511" src="https://www.youtube.com/embed/dvdx4fHkbWI?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe> -->
+			   <!-- <iframe class="videoContainer__video" width="1209" height="811" src="https://www.youtube.com/embed/HqjMkp0oo5k?rel=0&amp;&amp;showinfo=0;&autoplay=1;&loop=1;&playlist=8j5d_atFDiM"> </iframe> -->
+			   <iframe class="videoContainer__video" width="1209" height="811" src="https://www.youtube.com/embed/Jb-SAwr8bvk?rel=0&amp;&amp;showinfo=0;&autoplay=1;&loop=1;&playlist=8j5d_atFDiM"> </iframe> 
+			  <!-- <iframe class="videoContainer__video" width="1209" height="811" src="https://www.youtube.com/embed/YAjzcignrLU?rel=0&amp;&amp;showinfo=0;&autoplay=1;&loop=1;&playlist=8j5d_atFDiM"> </iframe> -->
+			  <!-- <iframe width="1209" height="811" src="https://www.youtube.com/embed/videoseries?autoplay=1&mute=1&playlist=PLRBRKAyPyCyqNqids-owwt5EoFjHSwR5d" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; loop" ></iframe> -->		</div>								
+	
+        <aside role="complementary" class="col-md-4">
+
+            <div class="row"><!--Mensagem-->
+              <div id="mensagem" class="col-md-14" align="center">
+                <span STYLE="font-size: 40pt">{{ ultima.mensagem }} - {{ultima.texto}}</span>
+              </div>
+            </div>
+
+            <div class="row"><!--Senha-->
+			  <div id="senha" class="blink">
+				<span STYLE="font-size: 90pt">{{ ultima.nomeCliente }}</span>
+			  </div>
+            </div>
+			
+            <div class="row"><!--Guichê-->
+              <div class="col-md-12">
+                <div id="local" class="local" class="blink">
+                    <span>{{ ultima.local }}</span>
+					
+                </div>
+                <div id="local-numero" class="numero-local">
+                    <span>{{ ultima.numeroLocal|pad:2 }}</span>
+										
+                </div>
+              </div>
+            </div>
+
+        </aside>
+    </div>
+    <footer class="row historicoStyle">
+      <div id="historico">
+          <div class="senhas">
+              <div class="col-sm-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+                  <div class="senha">
+					  <span STYLE="font-size: 40pt"> {{senha.texto}} - {{ senha.nomeCliente }}</span>
+                  </div>
+                  <div class="local">
+                      <span>{{ senha.local }}: {{ senha.numeroLocal| pad:2 }}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
